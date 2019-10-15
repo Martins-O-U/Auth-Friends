@@ -1,11 +1,21 @@
 import React, { useRef } from 'react';
+import axios from 'axios';
 
 export default function Login(props) {
   const usernameRef = useRef();
   const passwordRef = useRef();
 
   const submit = () => {
-console.log('Submitting...')
+    axios.post('http://localhost:5000/api/login', {
+      username: usernameRef.current.value,
+      password: passwordRef.current.value,
+    })
+      .then(res => {
+        localStorage.setItem('payload', res.data.payload)
+      })
+      .catch(error => {
+        alert(error.response.data.error);
+      });
   };
 
   return (
