@@ -12,6 +12,7 @@ export default function Login(props) {
     })
       .then(res => {
         localStorage.setItem('payload', res.data.payload)
+        props.history.push('/friends');
       })
       .catch(error => {
         alert(error.response.data.error);
