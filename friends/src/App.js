@@ -4,6 +4,7 @@ import './App.css';
 import Login from './Login';
 import Friends from './Friends';
 import AddFriend from './AddFriend';
+import Home from './Home'
 
 
 function App(props) {
@@ -16,15 +17,16 @@ function App(props) {
     <div className="App">
            <nav>
         <span>
-          <NavLink exact to='/api/login'>Login</NavLink>
-          <NavLink to='/friends'>Friends</NavLink>
-          <NavLink to='/addFriend'>AddFriend</NavLink>
+          <NavLink exact to='/' className='Navlinks'>Home</NavLink>
+          <NavLink exact to='/api/login' className='Navlinks'>Login</NavLink>
+          <NavLink to='/friends' className='Navlinks'>Friends</NavLink>
+          <NavLink to='/addFriend' className='Navlinks'>AddFriend</NavLink>
         </span>
-
-        <button onClick={onLogout}>Logout</button>
+        <button onClick={onLogout} className='logout'>Logout</button>
       </nav>
 
       <main>
+        <Route exact path='/' component={Home} />
         <Route
           exact
           path='/api/login'
