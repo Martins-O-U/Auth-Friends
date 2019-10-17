@@ -1,22 +1,60 @@
 .App {
   text-align: center;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.24);  background-color: #FFF;
+  margin-bottom: 10px;
+  background: #B0C4DE;
 }
 
-.App-logo {
-  height: 40vmin;
+.Navlinks{
+  margin: 20px 10px 10px 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.friends{
+  max-width: 700px;
+  width: 100%;
+  margin: 5% auto;
+  padding-bottom: 20px;
+}
+.friend{
+  margin: 5px 0px;
+  padding: 5px 3px;
+  background: #FFE4C4;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+nav{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
-.App-link {
-  color: #09d3ac;
+.logout{
+  margin: 10px 10px 0px 0px;
+}
+
+.login{
+  max-width: 600px;
+  margin: 5% auto;
+  width: 100%;
+  padding: 20px 3px;
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+  0 2px 4px rgba(0, 0, 0, 0.24);  background-color: #FFF;
+}
+
+.home{
+  background: #FFE4C4;
+  max-width: 700px;
+  width: 100%;
+  margin: 5% auto;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
